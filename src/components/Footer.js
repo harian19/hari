@@ -4,6 +4,7 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
 import Twitter from "@material-ui/icons/Twitter";
+import LinkedIn from "@material-ui/icons/LinkedIn";
 import Instagram from "@material-ui/icons/Instagram";
 
 const useStyles = makeStyles({
@@ -26,8 +27,8 @@ const Footer = () => {
 
   return (
     <BottomNavigation className={classes.bottomNavContainer}>
+      <BottomNavigationAction href={"https://www.linkedin.com/in/hari-anantharaman-1908/"} target="_blank" icon={<LinkedIn />} className={classes.root} />
       <BottomNavigationAction icon={<Facebook />} className={classes.root} />
-      <BottomNavigationAction icon={<Twitter />} className={classes.root} />
       <BottomNavigationAction icon={<Instagram />} className={classes.root} />
     </BottomNavigation>
   );

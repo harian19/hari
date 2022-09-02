@@ -2,10 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    // background: "#242526",
   },
   timeLine: {
     position: "relative",
@@ -107,100 +109,185 @@ const useStyles = makeStyles((theme) => ({
   subtitle1: {
     color: "tan",
   },
+  arrowBack: {
+    margin: theme.spacing(2),
+    cursor: "pointer"
+  },
 }));
 
 const Resume = () => {
   const classes = useStyles();
+  const history = useHistory();
   return (
     <Box component="header" className={classes.mainContainer}>
+      <ArrowBackIcon 
+      onClick = {() => history.goBack() }
+      className={classes.arrowBack} 
+      color="primary" 
+      fontSize="large"/>
       <Typography variant="h4" align="center" className={classes.heading}>
-        Working Experience
+        Professional Experience
       </Typography>
-      <Box component="div" className={classes.timeLine}>
+      <Box component="div" className={classes.timeLine}>    
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2013
+          2022
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
             variant="h5"
-            align="center"
+            align="left"
             className={classes.subHeading}
           >
-            web design
+            Software Engineering Intern
           </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+          <Typography variant="body1" align="left" className={classes.body1}>
+            Meta
           </Typography>
           <Typography
             variant="subtitle1"
-            align="center"
+            align="left"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            Developed the client side checkout flow in Facebook to purchase Oculus apps. 
+            This product was developed to grow VR users by displaying ads for Oculus apps.
+          </Typography>
+          <Typography variant="body1" align="left" className={classes.body1}>
+              Tech Stack: ReactJS, React-Native, GraphQL, Relay, Hack
+          </Typography>
+        </Box>
+
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2021
+        </Typography>
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="right"
+            className={classes.subHeading}
+          >
+            Consultant
+          </Typography>
+          <Typography variant="body1" align="right" className={classes.body1}>
+            MileIQ
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="right"
+            className={classes.subtitle1}
+          >
+            Freelanced as a data engineering consultant for MileIQ, 
+            an intelligent drive detection mobile app (like fitbit for vehicles).
+            I created data ingestion pipelines and one major task was rewriting the Mixpanel telemetry ingestion 
+            pipelines.
+
+          </Typography>
+          <Typography variant="body1" align="right" className={classes.body1}>
+              Tech Stack: Python, Azure, SQL, Kubernetes, Apache Spark
+          </Typography>
+        </Box>
+
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2020
+        </Typography>
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+              variant="h5"
+              align="left"
+              className={classes.subHeading}
+            >
+              Software Engineer II
+            </Typography>
+            <Typography variant="body1" align="left" className={classes.body1}>
+              Microsoft
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="left"
+              className={classes.subtitle1}
+            >
+              UI developer for the product Viva Insights. This involved creating a dashboard
+              of data-driven insights derived from various Office365 apps, to improve
+              employee wellbeing and experience for our customers. This was developed on 
+              multiple surfaces such as web, mail and Microsoft Teams.
+
+            </Typography>
+            <Typography variant="body1" align="left" className={classes.body1}>
+              Tech Stack: ReactJS, TypeScript, Flux, Less CSS, HTML, Teams SDK
+            </Typography>
+        </Box>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2019
+        </Typography>
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="right"
+            className={classes.subHeading}
+          >
+            Software Engineer
+          </Typography>
+          <Typography variant="body1" align="right" className={classes.body1}>
+            Microsoft
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="right"
+            className={classes.subtitle1}
+          >
+            Infrastrcuture engineer for an Office365 product - MileIQ. This involved
+            migrating these services from Flask-Nginx to Django-Ambassador. This also involved migrating them to 
+            run containerized with Kubernetes.
+          </Typography>
+          <Typography variant="body1" align="right" className={classes.body1}>
+            Tech Stack: Kubernetes, Django, Flask, Azure DevOps, Nginx
           </Typography>
         </Box>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2014
+          2018
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
             variant="h5"
-            align="center"
+            align="left"
             className={classes.subHeading}
           >
-            html & css
+            Software Engineer
           </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+          <Typography variant="body1" align="left" className={classes.body1}>
+            Microsoft
           </Typography>
           <Typography
             variant="subtitle1"
-            align="center"
+            align="left"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            I was a data platform engineer for an Office365 product - MileIQ. I built a platform
+            engineers to analyze A/B testing metrics and run data science experiments. This helped
+            create tools to improve our product's intelligence features. Scaling the product to interact
+            with daily streams of 20GB of data
+             and bringing down infrastrcuture cost by 50% were some of the key successes.
+
+          </Typography>
+          <Typography variant="body1" align="left" className={classes.body1}>
+            Tech Stack: Python, Azure, SQL, Kubernetes, Apache Spark
           </Typography>
         </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2015
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Fullstack Javascript
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
+
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
@@ -210,23 +297,24 @@ const Resume = () => {
         <Box component="div" className={classes.timeLineItem}>
           <Typography
             variant="h5"
-            align="center"
+            align="left"
             className={classes.subHeading}
           >
-            Django & React
+            Software Engineering Intern
           </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+          <Typography variant="body1" align="right" className={classes.body1}>
+            Samsung
           </Typography>
           <Typography
             variant="subtitle1"
-            align="center"
+            align="right"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            Summer SWE Intern - Optimized the deployment model of the LTE services by improving the fault detection and scalability.
+ 
+          </Typography>
+          <Typography variant="body1" align="right" className={classes.body1}>
+            Tech Stack: Bash, Perforce
           </Typography>
         </Box>
       </Box>
