@@ -5,10 +5,16 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from "react-router-dom";
 
 import Send from "@material-ui/icons/Send";
 
 const useStyles = makeStyles((theme) => ({
+  arrowBack: {
+    margin: theme.spacing(2),
+    cursor: "pointer"
+  },
   contactContainer: {
     // background: "#233",
     height: "100vh",
@@ -63,12 +69,18 @@ const InputField = withStyles({
 
 const Contact = () => {
   const classes = useStyles();
+  const history = useHistory();
   return (
     <Box component="div" className={classes.contactContainer}>
+      <ArrowBackIcon
+        onClick={() => history.goBack()}
+        className={classes.arrowBack}
+        color="error"
+        fontSize="large" />
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>
-            Hire or Contact me...
+            Contact me
           </Typography>
           <InputField
             fullWidth={true}
@@ -96,6 +108,7 @@ const Contact = () => {
             fullWidth={true}
             endIcon={<Send />}
             className={classes.button}
+            href={"mailto:harianantharaman19@gmail.com"}
           >
             Contact Me
           </Button>

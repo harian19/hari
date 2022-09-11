@@ -120,15 +120,15 @@ const Resume = () => {
   const history = useHistory();
   return (
     <Box component="header" className={classes.mainContainer}>
-      <ArrowBackIcon 
-      onClick = {() => history.goBack() }
-      className={classes.arrowBack} 
-      color="primary" 
-      fontSize="large"/>
+      <ArrowBackIcon
+        onClick={() => history.goBack()}
+        className={classes.arrowBack}
+        color="error"
+        fontSize="large" />
       <Typography variant="h4" align="center" className={classes.heading}>
         Professional Experience
       </Typography>
-      <Box component="div" className={classes.timeLine}>    
+      <Box component="div" className={classes.timeLine}>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
@@ -151,11 +151,11 @@ const Resume = () => {
             align="left"
             className={classes.subtitle1}
           >
-            Developed the client side checkout flow in Facebook to purchase Oculus apps. 
+            Developed the client side checkout flow in Facebook to purchase Oculus apps.
             This product was developed to grow VR users by displaying ads for Oculus apps.
           </Typography>
           <Typography variant="body1" align="left" className={classes.body1}>
-              Tech Stack: ReactJS, React-Native, GraphQL, Relay, Hack
+            Tech Stack: ReactJS, React-Native, GraphQL, Relay, Hack
           </Typography>
         </Box>
 
@@ -181,14 +181,14 @@ const Resume = () => {
             align="right"
             className={classes.subtitle1}
           >
-            Freelanced as a data engineering consultant for MileIQ, 
+            Freelanced as a data engineering consultant for MileIQ,
             an intelligent drive detection mobile app (like fitbit for vehicles).
-            I created data ingestion pipelines and one major task was rewriting the Mixpanel telemetry ingestion 
+            I created data ingestion pipelines and one major task was rewriting the Mixpanel telemetry ingestion
             pipelines.
 
           </Typography>
           <Typography variant="body1" align="right" className={classes.body1}>
-              Tech Stack: Python, Azure, SQL, Kubernetes, Apache Spark
+            Tech Stack: Python, Azure, SQL, Kubernetes, Apache Spark
           </Typography>
         </Box>
 
@@ -200,29 +200,29 @@ const Resume = () => {
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
-              variant="h5"
-              align="left"
-              className={classes.subHeading}
-            >
-              Software Engineer II
-            </Typography>
-            <Typography variant="body1" align="left" className={classes.body1}>
-              Microsoft
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="left"
-              className={classes.subtitle1}
-            >
-              UI developer for the product Viva Insights. This involved creating a dashboard
-              of data-driven insights derived from various Office365 apps, to improve
-              employee wellbeing and experience for our customers. This was developed on 
-              multiple surfaces such as web, mail and Microsoft Teams.
+            variant="h5"
+            align="left"
+            className={classes.subHeading}
+          >
+            Software Engineer II
+          </Typography>
+          <Typography variant="body1" align="left" className={classes.body1}>
+            Microsoft
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="left"
+            className={classes.subtitle1}
+          >
+            UI developer for the product Viva Insights. This involved creating a dashboard
+            of data-driven insights derived from various Office365 apps, to improve
+            employee wellbeing and experience for our customers. This was developed on
+            multiple surfaces such as web, mail and Microsoft Teams.
 
-            </Typography>
-            <Typography variant="body1" align="left" className={classes.body1}>
-              Tech Stack: ReactJS, TypeScript, Flux, Less CSS, HTML, Teams SDK
-            </Typography>
+          </Typography>
+          <Typography variant="body1" align="left" className={classes.body1}>
+            Tech Stack: ReactJS, TypeScript, Flux, Less CSS, HTML, Teams SDK
+          </Typography>
         </Box>
         <Typography
           variant="h2"
@@ -247,7 +247,7 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             Infrastrcuture engineer for an Office365 product - MileIQ. This involved
-            migrating these services from Flask-Nginx to Django-Ambassador. This also involved migrating them to 
+            migrating these services from Flask-Nginx to Django-Ambassador. This also involved migrating them to
             run containerized with Kubernetes.
           </Typography>
           <Typography variant="body1" align="right" className={classes.body1}>
@@ -280,7 +280,7 @@ const Resume = () => {
             engineers to analyze A/B testing metrics and run data science experiments. This helped
             create tools to improve our product's intelligence features. Scaling the product to interact
             with daily streams of 20GB of data
-             and bringing down infrastrcuture cost by 50% were some of the key successes.
+            and bringing down infrastrcuture cost by 50% were some of the key successes.
 
           </Typography>
           <Typography variant="body1" align="left" className={classes.body1}>
@@ -311,7 +311,7 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             Summer SWE Intern - Optimized the deployment model of the LTE services by improving the fault detection and scalability.
- 
+
           </Typography>
           <Typography variant="body1" align="right" className={classes.body1}>
             Tech Stack: Bash, Perforce
